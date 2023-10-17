@@ -7,7 +7,7 @@ build-vite:
   stage: build
   image: node
   script:
-    - pwd
+    - ls
     - npm i
     - npm run build
 
