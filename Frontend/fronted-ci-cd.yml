@@ -17,6 +17,7 @@ build-vite:
 pages:
   stage: deploy    
   script:
+    - cd Frontend
   artifacts:
     paths:
       - Frontend/public/  
