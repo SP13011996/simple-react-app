@@ -18,6 +18,7 @@ pages:
   stage: deploy    
   script:
     - cd Frontend
+    - ls
   artifacts:
     paths:
       - public/  
