@@ -22,7 +22,7 @@ pages:
     - mkdir .public
     - cp -r dist/* .public
     - mv .public public
-    - ls Frontend/public
+    - ls
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
