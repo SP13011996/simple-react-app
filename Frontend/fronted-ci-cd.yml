@@ -10,20 +10,12 @@ build-vite:
     - cd Frontend
     - npm i
     - npm run build
-  artifacts:
-    paths:
-      # The folder that contains the files to be exposed at the Page URL
-      - Frontend/dist/
 
 pages:
   stage: deploy    
   script:
-    - cd Frontend
-    - mkdir .public
-    - cp -r dist/* .public
-    - mv .public public
     - ls
-    - ls ./public
+    - ls ./Frontend/
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
