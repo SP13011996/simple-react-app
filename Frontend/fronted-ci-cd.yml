@@ -17,7 +17,7 @@ build-vite:
 pages:
   stage: deploy    
   script:
-    - cd frontend
+    - cd Frontend
     - mkdir public
     - cp -r dist/* public
     - cd ./public
