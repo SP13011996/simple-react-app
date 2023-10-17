@@ -17,7 +17,9 @@ build-vite:
 pages:
   stage: deploy    
   script:
-    - ls     
+  artifacts:
+    paths:
+      - Frontend/public/  
   rules:
     # This ensures that only pushes to the default branch will trigger
     # a pages deploy
