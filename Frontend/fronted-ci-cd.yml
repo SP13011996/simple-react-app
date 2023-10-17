@@ -9,11 +9,7 @@ build-vite:
   script:
     - cd Frontend
     - npm i
-    - npm run build
-  artifacts:
-    paths:
-      # The folder that contains the files to be exposed at the Page URL
-      - Frontend/dist/
+    - npm run build  
 
 pages:
   stage: deploy    
