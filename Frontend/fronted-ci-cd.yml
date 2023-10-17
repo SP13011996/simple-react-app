@@ -17,10 +17,10 @@ build-vite:
 pages:
   stage: deploy    
   script:
-    - cd Frontend
-    - mkdir public
-    - cp -r dist/* public
-    - cd ./public
+    - cd Frontend    
+    - mkdir .public
+    - cp -r dist/* .public
+    - mv .public public
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
