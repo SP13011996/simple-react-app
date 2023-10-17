@@ -1,2 +1,2 @@
 include:
-  - local: '../Frontend/fronted-ci-cd.yml'  
+  - local: 'Frontend/fronted-ci-cd.yml'  
