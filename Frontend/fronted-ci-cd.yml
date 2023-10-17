@@ -10,6 +10,10 @@ build-vite:
     - cd Frontend
     - npm i
     - npm run build
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - Frontend/public
 
 pages:
   stage: deploy
@@ -19,12 +23,13 @@ pages:
   image: node
   script:
     - cd Frontend
-    - npm i
-    - npm run build
+    - mkdir .public
+    - cp -r dist/* .public
+    - mv .public public
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
-      - ./Frontend/public/
+      - Frontend/public 
   rules:
     # This ensures that only pushes to the default branch will trigger
     # a pages deploy
