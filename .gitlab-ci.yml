@@ -1,8 +1,21 @@
-# The Docker image that will be used to build your app
-image: node
-# Functions that should be executed before the build script is run
-before_script: []
+stages:
+  - test
+  - build
+  - deploy
+
+build-vite:
+  stage: build
+  image: node
+  script:
+    - npm i
+    - npm run build
+
 pages:
+  stage: deploy
+  # Functions that should be executed before the build script is run
+  before_script: []
+  # The Docker image that will be used to build your app
+  image: node
   script:
     - npm i
     - npm run build
