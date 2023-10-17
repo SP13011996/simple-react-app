@@ -13,7 +13,7 @@ build-vite:
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
-      - Frontend/public
+      - Frontend/dist/
 
 pages:
   stage: deploy
