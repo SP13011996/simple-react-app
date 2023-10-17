@@ -23,6 +23,7 @@ pages:
     - cp -r dist/* .public
     - mv .public public
     - ls
+    - ls ./public
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
