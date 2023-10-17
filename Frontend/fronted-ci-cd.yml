@@ -12,11 +12,12 @@ build-vite:
     - npm run build
   artifacts:
     paths:
-      - Frontend/public/
+      - public/
 
 pages:
   stage: deploy    
   script:
+    - ls
     - cd Frontend
     - ls
   artifacts:
