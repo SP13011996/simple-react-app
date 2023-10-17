@@ -17,10 +17,7 @@ build-vite:
 pages:
   stage: deploy    
   script:
-    - cd Frontend  
-    - ls  
-    - mkdir -p public
-    - cp -r dist/* public/  
+    - ls     
   rules:
     # This ensures that only pushes to the default branch will trigger
     # a pages deploy
