@@ -7,7 +7,7 @@ build-vite:
   stage: build
   image: node
   script:
-    - ls
+    - cd Frontend
     - npm i
     - npm run build
 
@@ -18,6 +18,7 @@ pages:
   # The Docker image that will be used to build your app
   image: node
   script:
+    - cd Frontend
     - npm i
     - npm run build
   artifacts:
