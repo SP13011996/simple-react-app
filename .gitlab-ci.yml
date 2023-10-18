@@ -1,2 +1,12 @@
-include:
-  - local: 'Frontend/fronted-ci-cd.yml'
+#include:
+#  - local: 'Frontend/fronted-ci-cd.yml'
+
+pages:
+  stage: deploy
+  script:
+  - ls
+  artifacts:
+    paths:
+    - Frontend/testPage
+  rules:
+  - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH"
