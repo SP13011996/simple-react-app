@@ -1,12 +1,4 @@
 #include:
 #  - local: 'Frontend/fronted-ci-cd.yml'
-
-pages:
-  stage: deploy
-  script:
-  - ls
-  artifacts:
-    paths:
-    - public
-  rules:
-  - if: "$CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH"
+include:
+  - local: 'Backend/backend-ci-cd.yml'

@@ -1,0 +1,12 @@
+stages:
+  - test
+  - build
+  - deploy
+
+build-backend:
+  stage: build
+  image: gradle
+  script:
+    - cd Backend
+    - gradle build
+    - gradle run
